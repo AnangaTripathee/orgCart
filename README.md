@@ -7,9 +7,7 @@ Planned workflow: **event brief → Gemini shopping plan → editable cart → P
 > **Sandbox only.** orgCart's checkout uses PayPal's sandbox. No real money moves and
 > no goods are shipped. The app refuses to run checkout against PayPal's live API.
 
-## Current status: Phase 3 — PayPal sandbox checkout
-
-What works today:
+## Current status:
 
 - **Demo supply catalog**: 18 sample event supplies with category filters, including "All".
 - **Pack-based pricing**: every product is sold by the pack and shows its pack size.
@@ -160,12 +158,5 @@ The automated tests never call PayPal; they replace `fetch` and the PayPal clien
 - `lib/cart.ts`, `lib/checkout-state.ts`: pure client cart and checkout-state helpers.
 - `lib/checkout.ts`: request schema, server pricing, and the Orders API request body.
 - `lib/server/`: server-only PayPal client, checkout token, and settlement logic.
-
-## Roadmap
-
-- Phase 1: project setup (done)
-- Phase 2: catalog and editable cart (done)
-- Phase 3: PayPal sandbox checkout (done)
-- Next: Gemini shopping planner that turns an event brief into a cart within a budget
 
 All services used are free; there is no paid infrastructure.
